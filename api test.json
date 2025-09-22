@@ -1,0 +1,468 @@
+{
+  "v": 10,
+  "name": "edited",
+  "folders": [
+    {
+      "v": 10,
+      "name": "auth",
+      "folders": [],
+      "requests": [
+        {
+          "v": "15",
+          "name": "登录",
+          "method": "POST",
+          "endpoint": "http://localhost:3000/auth/login",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "bearer",
+            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjMsInVzZXJuYW1lIjoiYm9iIiwicm9sZSI6InVzZXIiLCJpYXQiOjE3NTg0ODI1MTksImV4cCI6MTc1ODU2ODkxOX0.duFpgVea5OB2YoQADze8AU0hRxBJ-KO1TzC6PaX81EI",
+            "authActive": true
+          },
+          "body": {
+            "contentType": "application/json",
+            "body": "{\n  \"username\": \"admin\",\n  \"password\": \"admin123\"\n}"
+          },
+          "requestVariables": [],
+          "responses": {}
+        },
+        {
+          "v": "15",
+          "name": "get me",
+          "method": "GET",
+          "endpoint": "http://localhost:3000/auth/me",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "bearer",
+            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInVzZXJuYW1lIjoidXNlciIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzU4NTUyNzU5LCJleHAiOjE3NTg2MzkxNTl9.DuPr3caHecfqcmZjRElxfWV4uoJrHHPj23CxWbu-31E",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [],
+          "responses": {}
+        },
+        {
+          "v": "15",
+          "name": "注册",
+          "method": "POST",
+          "endpoint": "http://localhost:3000/auth/register",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "inherit",
+            "authActive": true
+          },
+          "body": {
+            "contentType": "application/json",
+            "body": "{\n  \"username\": \"xi\",\n  \"password\": \"xi123\"\n}"
+          },
+          "requestVariables": [],
+          "responses": {}
+        }
+      ],
+      "auth": {
+        "authActive": true,
+        "authType": "inherit"
+      },
+      "headers": [],
+      "variables": [],
+      "_ref_id": "coll_mfv8sopg_74491e8c-97cc-4e0e-a50c-2efadd0bd443"
+    },
+    {
+      "v": 10,
+      "name": "admin",
+      "folders": [],
+      "requests": [
+        {
+          "v": "15",
+          "name": "get all users",
+          "method": "GET",
+          "endpoint": "http://localhost:3000/admin/users",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "bearer",
+            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NTg1NTMwMDMsImV4cCI6MTc1ODYzOTQwM30.zk10S_ELEGzc6d-LXLXqzGv2XBpGi265i9WfgvSi3pQ",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [],
+          "responses": {}
+        },
+        {
+          "v": "15",
+          "name": "get all outputs",
+          "method": "GET",
+          "endpoint": "http://localhost:3000/admin/outputs",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "bearer",
+            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NTg1NzE3MDQsImV4cCI6MTc1ODY1ODEwNH0._b7S9uny00X3lVmwnPKa656g-1G8NvAkIFNE2e_b-mI",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [],
+          "responses": {}
+        },
+        {
+          "v": "15",
+          "name": "get all uploads",
+          "method": "GET",
+          "endpoint": "http://localhost:3000/admin/uploads",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "bearer",
+            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NTg1NzE3MDQsImV4cCI6MTc1ODY1ODEwNH0._b7S9uny00X3lVmwnPKa656g-1G8NvAkIFNE2e_b-mI",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [],
+          "responses": {}
+        },
+        {
+          "v": "15",
+          "name": "删除上传",
+          "method": "DELETE",
+          "endpoint": "http://localhost:3000/admin/uploads/9",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "bearer",
+            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NTg1NzE3MDQsImV4cCI6MTc1ODY1ODEwNH0._b7S9uny00X3lVmwnPKa656g-1G8NvAkIFNE2e_b-mI",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [],
+          "responses": {}
+        },
+        {
+          "v": "15",
+          "name": "删除输出",
+          "method": "DELETE",
+          "endpoint": "http://localhost:3000/admin/outputs/4",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "bearer",
+            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NTg1NzE3MDQsImV4cCI6MTc1ODY1ODEwNH0._b7S9uny00X3lVmwnPKa656g-1G8NvAkIFNE2e_b-mI",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [],
+          "responses": {}
+        }
+      ],
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "headers": [],
+      "variables": [],
+      "_ref_id": "coll_mfv947s3_e3655a54-7e6e-477e-8c15-9f665d46a1a5"
+    },
+    {
+      "v": 10,
+      "name": "upload",
+      "folders": [],
+      "requests": [
+        {
+          "v": "15",
+          "name": "get all uploads by user",
+          "method": "GET",
+          "endpoint": "http://localhost:3000/uploads",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "bearer",
+            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInVzZXJuYW1lIjoidXNlciIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzU4NTQ2MDAwLCJleHAiOjE3NTg2MzI0MDB9.-r96GVb7H1oGgzGdbsfEw0NURC4e5O5hUdqh8Kpd7-Y",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [],
+          "responses": {}
+        },
+        {
+          "v": "15",
+          "name": "修改",
+          "method": "PATCH",
+          "endpoint": "http://localhost:3000/uploads/6",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "bearer",
+            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInVzZXJuYW1lIjoidXNlciIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzU4NTQ2MDAwLCJleHAiOjE3NTg2MzI0MDB9.-r96GVb7H1oGgzGdbsfEw0NURC4e5O5hUdqh8Kpd7-Y",
+            "authActive": true
+          },
+          "body": {
+            "contentType": "application/json",
+            "body": "{\n  \"displayName\": \"test 2\",\n  \"note\": \"一小时白噪音\"\n}"
+          },
+          "requestVariables": [],
+          "responses": {}
+        },
+        {
+          "v": "15",
+          "name": "删除",
+          "method": "DELETE",
+          "endpoint": "http://localhost:3000/uploads/6",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "bearer",
+            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInVzZXJuYW1lIjoidXNlciIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzU4NTQ2MDAwLCJleHAiOjE3NTg2MzI0MDB9.-r96GVb7H1oGgzGdbsfEw0NURC4e5O5hUdqh8Kpd7-Y",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [],
+          "responses": {}
+        },
+        {
+          "v": "15",
+          "name": "get by id",
+          "method": "GET",
+          "endpoint": "http://localhost:3000/uploads/6",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "bearer",
+            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInVzZXJuYW1lIjoidXNlciIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzU4NTQ2MDAwLCJleHAiOjE3NTg2MzI0MDB9.-r96GVb7H1oGgzGdbsfEw0NURC4e5O5hUdqh8Kpd7-Y",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [],
+          "responses": {}
+        },
+        {
+          "v": "15",
+          "name": "上传",
+          "method": "POST",
+          "endpoint": "http://localhost:3000/uploads",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "bearer",
+            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInVzZXJuYW1lIjoidXNlciIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzU4NTQ2MDAwLCJleHAiOjE3NTg2MzI0MDB9.-r96GVb7H1oGgzGdbsfEw0NURC4e5O5hUdqh8Kpd7-Y",
+            "authActive": true
+          },
+          "body": {
+            "contentType": "multipart/form-data",
+            "body": [
+              {
+                "key": "file",
+                "active": true,
+                "isFile": true,
+                "value": [
+                  {}
+                ]
+              },
+              {
+                "key": "displayName",
+                "active": true,
+                "isFile": false,
+                "value": "api测试"
+              },
+              {
+                "key": "note",
+                "active": true,
+                "isFile": false,
+                "value": "123"
+              }
+            ]
+          },
+          "requestVariables": [],
+          "responses": {}
+        }
+      ],
+      "auth": {
+        "authActive": true,
+        "authType": "inherit"
+      },
+      "headers": [],
+      "variables": [],
+      "_ref_id": "coll_mfv95f25_1c6610a2-5f24-43ea-9eca-8f14544331af"
+    },
+    {
+      "v": 10,
+      "name": "output",
+      "folders": [],
+      "requests": [
+        {
+          "v": "15",
+          "name": "transcode",
+          "method": "POST",
+          "endpoint": "http://localhost:3000/outputs/9",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "bearer",
+            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInVzZXJuYW1lIjoidXNlciIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzU4NTQ2MDAwLCJleHAiOjE3NTg2MzI0MDB9.-r96GVb7H1oGgzGdbsfEw0NURC4e5O5hUdqh8Kpd7-Y",
+            "authActive": true
+          },
+          "body": {
+            "contentType": "application/json",
+            "body": "{\n  \"displayName\": \"720p\", \n  \"note\": \"转码测试3\"\n}"
+          },
+          "requestVariables": [],
+          "responses": {}
+        },
+        {
+          "v": "15",
+          "name": "get all",
+          "method": "GET",
+          "endpoint": "http://localhost:3000/outputs",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "bearer",
+            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInVzZXJuYW1lIjoidXNlciIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzU4NTQ2MDAwLCJleHAiOjE3NTg2MzI0MDB9.-r96GVb7H1oGgzGdbsfEw0NURC4e5O5hUdqh8Kpd7-Y",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [],
+          "responses": {}
+        },
+        {
+          "v": "15",
+          "endpoint": "http://localhost:3000/outputs/2",
+          "name": "get by id",
+          "params": [],
+          "headers": [],
+          "method": "GET",
+          "auth": {
+            "authType": "bearer",
+            "authActive": true,
+            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInVzZXJuYW1lIjoidXNlciIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzU4NTQ2MDAwLCJleHAiOjE3NTg2MzI0MDB9.-r96GVb7H1oGgzGdbsfEw0NURC4e5O5hUdqh8Kpd7-Y"
+          },
+          "preRequestScript": "",
+          "testScript": "",
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [],
+          "responses": {}
+        },
+        {
+          "v": "15",
+          "endpoint": "http://localhost:3000/outputs/2",
+          "name": "修改",
+          "params": [],
+          "headers": [],
+          "method": "PATCH",
+          "auth": {
+            "authType": "bearer",
+            "authActive": true,
+            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInVzZXJuYW1lIjoidXNlciIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzU4NTQ2MDAwLCJleHAiOjE3NTg2MzI0MDB9.-r96GVb7H1oGgzGdbsfEw0NURC4e5O5hUdqh8Kpd7-Y"
+          },
+          "preRequestScript": "",
+          "testScript": "",
+          "body": {
+            "contentType": "application/json",
+            "body": "{\n  \"dispalyName\":\"第二个输出视频\",\n  \"note\": \"修改了note\"\n}"
+          },
+          "requestVariables": [],
+          "responses": {}
+        },
+        {
+          "v": "15",
+          "endpoint": "http://localhost:3000/outputs/2",
+          "name": "删除",
+          "params": [],
+          "headers": [],
+          "method": "DELETE",
+          "auth": {
+            "authType": "bearer",
+            "authActive": true,
+            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInVzZXJuYW1lIjoidXNlciIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzU4NTQ2MDAwLCJleHAiOjE3NTg2MzI0MDB9.-r96GVb7H1oGgzGdbsfEw0NURC4e5O5hUdqh8Kpd7-Y"
+          },
+          "preRequestScript": "",
+          "testScript": "",
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [],
+          "responses": {}
+        }
+      ],
+      "auth": {
+        "authType": "inherit",
+        "authActive": true
+      },
+      "headers": [],
+      "variables": [],
+      "_ref_id": "coll_mfvegurs_4ec15257-b102-4bf2-9caf-e71fe89d4e26"
+    }
+  ],
+  "requests": [],
+  "auth": {
+    "authType": "none",
+    "authActive": true
+  },
+  "headers": [],
+  "variables": [],
+  "_ref_id": "coll_mfv8sgih_bf55730a-55be-40e4-8b94-3bfa85f335a5"
+}

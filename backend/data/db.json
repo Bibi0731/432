@@ -1,0 +1,125 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "admin",
+      "password": "admin123",
+      "role": "admin"
+    },
+    {
+      "id": 2,
+      "username": "user",
+      "password": "user123",
+      "role": "user"
+    },
+    {
+      "id": 3,
+      "username": "bob",
+      "password": "bob123",
+      "role": "user"
+    },
+    {
+      "id": 4,
+      "username": "bea",
+      "password": "bea123",
+      "role": "user"
+    },
+    {
+      "id": 5,
+      "username": "xi",
+      "password": "xi123",
+      "role": "user"
+    }
+  ],
+  "uploads": [
+    {
+      "id": 3,
+      "ownerId": 2,
+      "filename": "5cd84ac5-d38f-4670-874f-56c261f3af8c.mp4",
+      "originalName": "1miné£æ¯.mp4",
+      "mimeType": "video/mp4",
+      "size": 3821902,
+      "displayName": "测试1111",
+      "createdAt": "2025-09-22T14:44:04.418Z",
+      "updatedAt": 1758568105490,
+      "note": "patch测试"
+    },
+    {
+      "id": 7,
+      "ownerId": 2,
+      "filename": "144b1341-b897-40cb-a397-167850a9f41e.mp4",
+      "originalName": "7_50.mp4",
+      "mimeType": "video/mp4",
+      "size": 47349036,
+      "displayName": "测试3",
+      "note": "45MB",
+      "createdAt": "2025-09-22T17:58:08.314Z",
+      "updatedAt": "2025-09-22T17:58:08.314Z"
+    },
+    {
+      "id": 8,
+      "ownerId": 2,
+      "filename": "59a413e9-ff0c-4809-aaed-0c80de3f0271.mp4",
+      "originalName": "8_22.mp4",
+      "mimeType": "video/mp4",
+      "size": 21956540,
+      "displayName": "test 3",
+      "note": "测试2 20mb",
+      "createdAt": "2025-09-22T18:54:51.185Z",
+      "updatedAt": "2025-09-22T18:54:51.185Z"
+    },
+    {
+      "id": 9,
+      "ownerId": 2,
+      "filename": "572fb80f-2b87-4875-aba2-403d4faa1965.mp4",
+      "originalName": "1miné£æ¯.mp4",
+      "mimeType": "video/mp4",
+      "size": 3821902,
+      "displayName": "api测试",
+      "note": "123",
+      "createdAt": "2025-09-22T20:37:31.161Z",
+      "updatedAt": "2025-09-22T20:37:31.161Z"
+    }
+  ],
+  "outputs": [
+    {
+      "id": 1,
+      "ownerId": 2,
+      "uploadId": "7",
+      "filename": "144b1341-b897-40cb-a397-167850a9f41e-transcoded.mp4",
+      "originalName": "7_50.mp4",
+      "mimeType": "video/mp4",
+      "size": 110964966,
+      "displayName": "新版 720p",
+      "note": "我更新了备注1",
+      "createdAt": 1758566511164,
+      "updatedAt": 1758568830190
+    },
+    {
+      "id": 6,
+      "ownerId": 2,
+      "uploadId": "8",
+      "filename": "59a413e9-ff0c-4809-aaed-0c80de3f0271-transcoded.mp4",
+      "originalName": "8_22.mp4",
+      "mimeType": "video/mp4",
+      "size": 9950392,
+      "displayName": "新版 720p",
+      "note": "我更新了备注",
+      "createdAt": "2025-09-22T19:21:06.553Z",
+      "updatedAt": 1758568998858
+    },
+    {
+      "id": 7,
+      "ownerId": 2,
+      "uploadId": "9",
+      "filename": "572fb80f-2b87-4875-aba2-403d4faa1965-transcoded.mp4",
+      "originalName": "1miné£æ¯.mp4",
+      "mimeType": "video/mp4",
+      "size": 3945981,
+      "displayName": "720p",
+      "note": "转码测试3",
+      "createdAt": "2025-09-22T20:38:48.622Z",
+      "updatedAt": "2025-09-22T20:38:48.622Z"
+    }
+  ]
+}
