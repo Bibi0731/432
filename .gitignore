@@ -33,9 +33,7 @@ pids
 .env.local
 .env.*.local
 
-# ===============================
 # VS Code / 编辑器
-# ===============================
 .vscode/
 .history/
 .idea/
