@@ -38,14 +38,20 @@ exports.getAllMine = (req, res) => {
     const all = uploadModel.getByOwner(ownerId);
     const paging = getPaging(req, { defaultPageSize: 10, maxPageSize: 100 });
 
-    // 可选：关键词过滤
     const q = (req.query.q || '').toLowerCase();
     const filtered = q
         ? all.filter(x => (x.displayName || '').toLowerCase().includes(q) || (x.originalName || '').toLowerCase().includes(q))
         : all;
 
     const result = paginateArray(filtered, paging);
-    res.json(result);
+
+    // 👇 保证输出分页对象，而不是数组
+    res.json({
+        items: result.items,
+        page: result.page,
+        totalPages: result.totalPages,
+        totalItems: result.totalItems
+    });
 };
 
 exports.getOne = (req, res) => {
@@ -98,4 +104,16 @@ exports.remove = async (req, res) => {
             note: removed.note
         }
     });
+};
+
+exports.getDownloadLink = (req, res) => {
+    const ownerId = req.user.userId;
+    const item = uploadModel.getById(req.params.id);
+
+    if (!item || String(item.ownerId) !== String(ownerId)) {
+        return res.status(404).json({ error: 'Not found' });
+    }
+
+    const url = `${req.protocol}://${req.get('host')}/uploads/${item.filename}`;
+    res.json({ downloadUrl: url });
 };

@@ -3,6 +3,7 @@ const uploadModel = require('../models/uploadModel');
 const path = require('path');
 const fse = require('fs-extra');
 const ffmpeg = require('fluent-ffmpeg');
+const { getPaging, paginateArray } = require('../utils/pagination');
 
 const UPLOAD_DIR = process.env.UPLOAD_DIR || 'data/uploads';
 const OUTPUT_DIR = process.env.OUTPUT_DIR || 'data/outputs';
@@ -80,7 +81,26 @@ exports.create = async (req, res) => {
 exports.getAllMine = (req, res) => {
     const ownerId = req.user.userId;
     const items = outputModel.getByOwner(ownerId);
-    res.json(items);
+
+    const paging = getPaging(req, { defaultPageSize: 5, maxPageSize: 100 });
+
+    const q = (req.query.q || '').toLowerCase();
+    const filtered = q
+        ? items.filter(x =>
+            (x.displayName || '').toLowerCase().includes(q) ||
+            (x.originalName || '').toLowerCase().includes(q)
+        )
+        : items;
+
+    const result = paginateArray(filtered, paging);
+
+    // 👇 保证统一结构
+    res.json({
+        items: result.items,
+        page: result.page,
+        totalPages: result.totalPages,
+        totalItems: result.totalItems
+    });
 };
 
 // 获取单个转码结果
@@ -117,4 +137,16 @@ exports.remove = async (req, res) => {
     } catch { }
 
     res.json({ message: 'Output deleted', deleted: removed });
+};
+
+exports.getDownloadLink = (req, res) => {
+    const ownerId = req.user.userId;
+    const item = outputModel.getById(req.params.id);
+
+    if (!item || String(item.ownerId) !== String(ownerId)) {
+        return res.status(404).json({ error: 'Not found' });
+    }
+
+    const url = `${req.protocol}://${req.get('host')}/outputs/${item.filename}`;
+    res.json({ downloadUrl: url });
 };

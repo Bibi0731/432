@@ -4,18 +4,19 @@ const toInt = (v, def) => {
     return Number.isFinite(n) && n > 0 ? n : def;
 };
 
-exports.getPaging = (req, opts = {}) => {
-    const { defaultPageSize = 20, maxPageSize = 100 } = opts;
-    const page = toInt(req.query.page, 1);
-    let pageSize = toInt(req.query.pageSize, defaultPageSize);
-    if (pageSize > maxPageSize) pageSize = maxPageSize;
-    return { page, pageSize, offset: (page - 1) * pageSize, limit: pageSize };
-};
+function getPaging(req, { defaultPageSize = 10, maxPageSize = 100 } = {}) {
+    const page = Math.max(1, parseInt(req.query.page) || 1);
+    let pageSize = parseInt(req.query.pageSize) || defaultPageSize;
+    pageSize = Math.min(pageSize, maxPageSize);
+    return { page, pageSize };
+}
 
-exports.paginateArray = (allItems, paging, mapper) => {
-    const { offset, limit, page, pageSize } = paging;
-    const total = allItems.length;
-    const sliced = allItems.slice(offset, offset + limit);
-    const items = mapper ? sliced.map(mapper) : sliced;
-    return { meta: { total, page, pageSize, pages: Math.max(1, Math.ceil(total / pageSize)) }, items };
-};
+function paginateArray(array, { page, pageSize }) {
+    const totalItems = array.length;
+    const totalPages = Math.ceil(totalItems / pageSize);
+    const start = (page - 1) * pageSize;
+    const items = array.slice(start, start + pageSize);
+    return { items, page, totalPages, totalItems };
+}
+
+module.exports = { getPaging, paginateArray };

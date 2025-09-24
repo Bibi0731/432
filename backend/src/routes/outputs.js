@@ -13,4 +13,7 @@ router.get('/:id', authenticate, outputsController.getOne);
 router.patch('/:id', authenticate, outputsController.update);
 router.delete('/:id', authenticate, outputsController.remove);
 
+// 下载链接
+router.get('/:id/download-link', authenticate, outputsController.getDownloadLink);
+
 module.exports = router;

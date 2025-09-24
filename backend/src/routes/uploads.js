@@ -22,6 +22,7 @@ router.get('/', authenticate, uploadsController.getAllMine);                    
 router.get('/:id', authenticate, uploadsController.getOne);                            // 查询单条
 router.patch('/:id', authenticate, uploadsController.update);                          // 更新元数据
 router.delete('/:id', authenticate, uploadsController.remove);                         // 删除记录+物理文件
-
+// 下载链接
+router.get('/:id/download-link', authenticate, uploadsController.getDownloadLink);
 
 module.exports = router;

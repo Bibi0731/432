@@ -94,7 +94,7 @@
           "testScript": "",
           "auth": {
             "authType": "bearer",
-            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NTg1NTMwMDMsImV4cCI6MTc1ODYzOTQwM30.zk10S_ELEGzc6d-LXLXqzGv2XBpGi265i9WfgvSi3pQ",
+            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NTg2NTQyMzEsImV4cCI6MTc1ODc0MDYzMX0.nO34lbCCCldjDUk8YsL94JBkkLOQUe0dCouomfMCMTc",
             "authActive": true
           },
           "body": {
@@ -115,7 +115,7 @@
           "testScript": "",
           "auth": {
             "authType": "bearer",
-            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NTg1NzE3MDQsImV4cCI6MTc1ODY1ODEwNH0._b7S9uny00X3lVmwnPKa656g-1G8NvAkIFNE2e_b-mI",
+            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NTg2NTQyMzEsImV4cCI6MTc1ODc0MDYzMX0.nO34lbCCCldjDUk8YsL94JBkkLOQUe0dCouomfMCMTc",
             "authActive": true
           },
           "body": {
@@ -136,7 +136,7 @@
           "testScript": "",
           "auth": {
             "authType": "bearer",
-            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NTg1NzE3MDQsImV4cCI6MTc1ODY1ODEwNH0._b7S9uny00X3lVmwnPKa656g-1G8NvAkIFNE2e_b-mI",
+            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3NTg2NTQyMzEsImV4cCI6MTc1ODc0MDYzMX0.nO34lbCCCldjDUk8YsL94JBkkLOQUe0dCouomfMCMTc",
             "authActive": true
           },
           "body": {
@@ -190,8 +190,8 @@
         }
       ],
       "auth": {
-        "authType": "inherit",
-        "authActive": true
+        "authActive": true,
+        "authType": "inherit"
       },
       "headers": [],
       "variables": [],
@@ -206,14 +206,14 @@
           "v": "15",
           "name": "get all uploads by user",
           "method": "GET",
-          "endpoint": "http://localhost:3000/uploads",
+          "endpoint": "http://localhost:3000/uploads/",
           "params": [],
           "headers": [],
           "preRequestScript": "",
           "testScript": "",
           "auth": {
             "authType": "bearer",
-            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInVzZXJuYW1lIjoidXNlciIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzU4NTQ2MDAwLCJleHAiOjE3NTg2MzI0MDB9.-r96GVb7H1oGgzGdbsfEw0NURC4e5O5hUdqh8Kpd7-Y",
+            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInVzZXJuYW1lIjoidXNlciIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzU4NjUzODE1LCJleHAiOjE3NTg3NDAyMTV9.9e6w9UIYTA3HqvaKRBylZjiQcSQC8VOJcQhcOXT7f2Y",
             "authActive": true
           },
           "body": {
@@ -306,10 +306,8 @@
               {
                 "key": "file",
                 "active": true,
-                "isFile": true,
-                "value": [
-                  {}
-                ]
+                "isFile": false,
+                "value": ""
               },
               {
                 "key": "displayName",
@@ -324,6 +322,27 @@
                 "value": "123"
               }
             ]
+          },
+          "requestVariables": [],
+          "responses": {}
+        },
+        {
+          "v": "15",
+          "name": "下载",
+          "method": "GET",
+          "endpoint": "http://localhost:3000/uploads/7/download-link",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "bearer",
+            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInVzZXJuYW1lIjoidXNlciIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzU4NjUzODE1LCJleHAiOjE3NTg3NDAyMTV9.9e6w9UIYTA3HqvaKRBylZjiQcSQC8VOJcQhcOXT7f2Y",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
           },
           "requestVariables": [],
           "responses": {}
@@ -367,7 +386,28 @@
           "v": "15",
           "name": "get all",
           "method": "GET",
-          "endpoint": "http://localhost:3000/outputs",
+          "endpoint": "http://localhost:3000/outputs/",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "bearer",
+            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInVzZXJuYW1lIjoidXNlciIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzU4NjUzODE1LCJleHAiOjE3NTg3NDAyMTV9.9e6w9UIYTA3HqvaKRBylZjiQcSQC8VOJcQhcOXT7f2Y",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [],
+          "responses": {}
+        },
+        {
+          "v": "15",
+          "name": "get by id",
+          "method": "GET",
+          "endpoint": "http://localhost:3000/outputs/2",
           "params": [],
           "headers": [],
           "preRequestScript": "",
@@ -386,39 +426,18 @@
         },
         {
           "v": "15",
-          "endpoint": "http://localhost:3000/outputs/2",
-          "name": "get by id",
-          "params": [],
-          "headers": [],
-          "method": "GET",
-          "auth": {
-            "authType": "bearer",
-            "authActive": true,
-            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInVzZXJuYW1lIjoidXNlciIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzU4NTQ2MDAwLCJleHAiOjE3NTg2MzI0MDB9.-r96GVb7H1oGgzGdbsfEw0NURC4e5O5hUdqh8Kpd7-Y"
-          },
-          "preRequestScript": "",
-          "testScript": "",
-          "body": {
-            "contentType": null,
-            "body": null
-          },
-          "requestVariables": [],
-          "responses": {}
-        },
-        {
-          "v": "15",
-          "endpoint": "http://localhost:3000/outputs/2",
           "name": "修改",
+          "method": "PATCH",
+          "endpoint": "http://localhost:3000/outputs/2",
           "params": [],
           "headers": [],
-          "method": "PATCH",
-          "auth": {
-            "authType": "bearer",
-            "authActive": true,
-            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInVzZXJuYW1lIjoidXNlciIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzU4NTQ2MDAwLCJleHAiOjE3NTg2MzI0MDB9.-r96GVb7H1oGgzGdbsfEw0NURC4e5O5hUdqh8Kpd7-Y"
-          },
           "preRequestScript": "",
           "testScript": "",
+          "auth": {
+            "authType": "bearer",
+            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInVzZXJuYW1lIjoidXNlciIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzU4NTQ2MDAwLCJleHAiOjE3NTg2MzI0MDB9.-r96GVb7H1oGgzGdbsfEw0NURC4e5O5hUdqh8Kpd7-Y",
+            "authActive": true
+          },
           "body": {
             "contentType": "application/json",
             "body": "{\n  \"dispalyName\":\"第二个输出视频\",\n  \"note\": \"修改了note\"\n}"
@@ -428,18 +447,39 @@
         },
         {
           "v": "15",
-          "endpoint": "http://localhost:3000/outputs/2",
           "name": "删除",
+          "method": "DELETE",
+          "endpoint": "http://localhost:3000/outputs/2",
           "params": [],
           "headers": [],
-          "method": "DELETE",
-          "auth": {
-            "authType": "bearer",
-            "authActive": true,
-            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInVzZXJuYW1lIjoidXNlciIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzU4NTQ2MDAwLCJleHAiOjE3NTg2MzI0MDB9.-r96GVb7H1oGgzGdbsfEw0NURC4e5O5hUdqh8Kpd7-Y"
-          },
           "preRequestScript": "",
           "testScript": "",
+          "auth": {
+            "authType": "bearer",
+            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInVzZXJuYW1lIjoidXNlciIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzU4NTQ2MDAwLCJleHAiOjE3NTg2MzI0MDB9.-r96GVb7H1oGgzGdbsfEw0NURC4e5O5hUdqh8Kpd7-Y",
+            "authActive": true
+          },
+          "body": {
+            "contentType": null,
+            "body": null
+          },
+          "requestVariables": [],
+          "responses": {}
+        },
+        {
+          "v": "15",
+          "name": "下载",
+          "method": "GET",
+          "endpoint": "http://localhost:3000/outputs/7/download-link",
+          "params": [],
+          "headers": [],
+          "preRequestScript": "",
+          "testScript": "",
+          "auth": {
+            "authType": "bearer",
+            "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjIsInVzZXJuYW1lIjoidXNlciIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNzU4NjUzODE1LCJleHAiOjE3NTg3NDAyMTV9.9e6w9UIYTA3HqvaKRBylZjiQcSQC8VOJcQhcOXT7f2Y",
+            "authActive": true
+          },
           "body": {
             "contentType": null,
             "body": null
@@ -459,8 +499,8 @@
   ],
   "requests": [],
   "auth": {
-    "authType": "none",
-    "authActive": true
+    "authActive": true,
+    "authType": "none"
   },
   "headers": [],
   "variables": [],
