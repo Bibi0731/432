@@ -1,28 +1,15 @@
-const multer = require('multer');
-const path = require('path');
-const { v4: uuidv4 } = require('uuid');
-const fs = require('fs');
+// src/middleware/upload.js
+const multer = require("multer");
+const path = require("path");
 
-const UPLOAD_DIR = process.env.UPLOAD_DIR || 'data/uploads';
-
-// 确保目录存在
-fs.mkdirSync(path.join(process.cwd(), UPLOAD_DIR), { recursive: true });
-
-// 存储策略
+// 存到本地临时目录 tmp/
 const storage = multer.diskStorage({
-    destination: function (req, file, cb) {
-        cb(null, path.join(process.cwd(), UPLOAD_DIR));
+    destination: "tmp/",   // ⚠️ 确保项目根目录有 tmp 文件夹
+    filename: (req, file, cb) => {
+        const ext = path.extname(file.originalname); // 保留扩展名
+        cb(null, Date.now() + ext); // 用时间戳生成唯一文件名
     },
-    filename: function (req, file, cb) {
-        const ext = path.extname(file.originalname) || '';
-        cb(null, `${uuidv4()}${ext}`);
-    }
 });
 
-// 上传中间件
-const upload = multer({
-    storage,
-    limits: { fileSize: 10 * 1024 * 1024 * 1024 } // 默认 10GB
-});
-
+const upload = multer({ storage });
 module.exports = upload;

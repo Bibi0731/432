@@ -71,8 +71,16 @@ function renderOutputs(items) {
 
 // ================= Actions =================
 async function downloadUpload(id) {
-    const res = await fetchWithAuth(`/uploads/${id}/download-link`);
-    window.open(res.downloadUrl, "_blank");
+    try {
+        const res = await fetchWithAuth(`/uploads/${id}/download-link`);
+        if (res.downloadUrl) {
+            window.open(res.downloadUrl, "_blank");
+        } else {
+            alert("Download link not available");
+        }
+    } catch (err) {
+        alert("Download failed: " + err.message);
+    }
 }
 
 async function deleteUpload(id) {
